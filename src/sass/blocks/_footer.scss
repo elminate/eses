@@ -1,0 +1,22 @@
+.footer{
+    &__form {
+        padding: 100px 0;
+        background: url(../img/bg/city.jpg) center center / cover no-repeat;
+        color:var(--white-clr);
+        &-title, &-subtitle{
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 15px;
+        }
+        &-input{
+            margin-top: 15px;
+            padding: .375rem 2.75rem;
+        }
+        &-btn{
+            @include auto;
+            margin-top: 20px;
+            padding: 20px 2.6rem;
+        }
+    }
+}

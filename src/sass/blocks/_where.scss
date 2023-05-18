@@ -1,0 +1,17 @@
+.where {
+    &__title {
+        color:var(--dark-clr);
+    }
+    &__point {
+        padding: 20px 15px;
+        width: 260px;
+        &:nth-child(2n+1):nth-child(-n+4) {
+            background: var(--danger-clr);
+            color:#fff;
+        }
+        &:nth-child(n+5):nth-child(2n+2) {
+            background: var(--danger-clr);
+            color:#fff;
+        }
+    }
+}

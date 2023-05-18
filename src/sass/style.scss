@@ -1,0 +1,129 @@
+@import 'libs/normalize.min';
+@import 'libs/bootstrap-grid.min.css';
+@import 'libs/fonts';
+@import 'libs/libs';
+
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    @include reset;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px;
+    border-left: 15px solid var(--danger-clr);
+    padding-left: 20px;
+    margin-bottom: 60px;
+    &__price{
+        font-weight: bold;
+        line-height: 22px;
+        text-transform: uppercase;
+        color:var(--danger-clr);
+    }
+}
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: radial-gradient(66.39% 66.39% at 50% 2.46%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.3) 75%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, var(--danger-clr) 0%, var(--danger-clr) 100%);
+    border:0.25px solid var(--danger-clr);
+    box-shadow: 0px 0px 15px var(--danger-clr);
+    border-radius: 100px;
+    font-weight: bold;
+    transition: .5s all;
+    color:var(--white-clr);
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1, 1.1)
+    }
+    &__header{
+        padding: 0 10px;
+        margin-right: 40px;
+        height: 61px;
+        font-size: 13px;
+        line-height: 17px;
+        border: 0.5px solid var(--danger-clr);
+        background: none;
+        box-shadow: none;
+    }
+}
+.zagolovok {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    color:var(--white-clr);
+}
+.divid{
+    margin-top: 15px;
+    width: 70px;
+    height: 2px;
+    background-color: #C4C4C4;
+    border: none;
+}
+.descr{
+    line-height: 20px;
+    color:var(--white-clr);
+    margin-top: 15px;
+}
+.form{
+    &__input{
+        padding: 6px 12px;
+        border:1px solid #E5E5E5;
+        border-radius: 100px;
+        height: 61px;
+        font-style: italic;
+        font-size: 12px;
+        line-height: 15px;
+        color:#989898;
+        font-weight: 300;
+    }
+}
+.privacy {
+        &__check {
+            display: block;
+            margin-top: 25px;
+            color: #969696;
+            font-weight: 300;
+        }
+}
+.py60{
+    padding: 60px 0;
+}
+.mt15{
+    margin-top: 15px;
+}
+
+@import 'blocks/header';
+
+@import 'blocks/modal';
+
+@import 'blocks/promo';
+@import 'blocks/price';
+@import 'blocks/about';
+@import 'blocks/advantages';
+@import 'blocks/methods';
+@import 'blocks/if';
+@import 'blocks/where';
+@import 'blocks/faq';
+
+@import 'blocks/contacts';
+@import 'blocks/cockroach';
+
+@import 'blocks/txt';
+
+@import 'blocks/footer';
+
+@import 'blocks/media';

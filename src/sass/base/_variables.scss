@@ -1,0 +1,14 @@
+*{
+    --white-clr: #eee;
+    --yellow-clr: #ffe300;
+    --dark-clr: #333;
+    --black-clr: #212529;
+    --danger-clr: #ed2524;
+}
+
+.bg-black-clr {
+    background-color: var(--black-clr);
+}
+.bg-white-clr {
+    background-color: var(--white-clr);
+}

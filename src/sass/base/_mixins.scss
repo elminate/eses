@@ -1,0 +1,65 @@
+@mixin auto {
+    margin: {
+     left: auto;
+     right: auto;
+    }
+  }
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+content: $content;
+display: $display;
+position: $pos;
+}
+
+@mixin reset{
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+    font-size: 16px;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    outline: none;
+    resize: none;
+    -webkit-text-size-adjust: none;
+    :focus::-webkit-input-placeholder { color:transparent; }
+    :focus::-moz-placeholder { color:transparent; }
+    :focus::placeholder { color:transparent; }
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+    }
+    p{
+        padding: 0;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+    ul, li{
+        padding: 0;
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    strong {
+        font-weight: normal;
+    }
+    input {
+        border: none;
+    }
+    input, textarea {
+        -moz-user-select: text;
+        -o-user-select: text;
+        -khtml-user-select: text;
+        -webkit-user-select: text;
+        user-select: text;
+        resize: none;
+    }
+    button{
+        cursor: pointer;
+        border:none;outline: none;
+        display: block;
+    }
+    span {
+        font-size: inherit;
+    }
+}

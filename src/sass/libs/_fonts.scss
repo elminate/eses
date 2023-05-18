@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('fonts/FiraSans-Bold.eot');
+    src: url('fonts/FiraSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/FiraSans-Bold.woff2') format('woff2'),
+        url('fonts/FiraSans-Bold.woff') format('woff'),
+        url('fonts/FiraSans-Bold.svg#FiraSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('fonts/FiraSans-Light.eot');
+    src: url('fonts/FiraSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/FiraSans-Light.woff2') format('woff2'),
+        url('fonts/FiraSans-Light.woff') format('woff'),
+        url('fonts/FiraSans-Light.svg#FiraSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('fonts/FiraSans-Medium.eot');
+    src: url('fonts/FiraSans-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/FiraSans-Medium.woff2') format('woff2'),
+        url('fonts/FiraSans-Medium.woff') format('woff'),
+        url('fonts/FiraSans-Medium.svg#FiraSans-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

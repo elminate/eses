@@ -1,0 +1,62 @@
+.advantages{
+    background: url(../img/bg/advantages.jpg) center center / cover no-repeat;
+    padding: 90px;
+    &__title{
+        color:var(--white-clr);
+    }
+    .divid{
+        @include auto;
+    }
+    .descr {
+        font-weight: 300;
+    }
+    &__list {
+        padding: 102px 32px 32px 32px;
+        background: rgba(255, 255, 255, 0.25);
+        width: 290px;
+        margin: 20px 0;
+        border-radius:20px;
+        position: relative;
+        &:after {
+            @include pseudo;
+            background: var(--danger-clr);
+            width: 50px;height: 50px;
+            border-radius: 100%;
+            top: 32px;
+        }
+        &::before {
+            @include pseudo;
+            top: 48px;
+            left: 50%;transform: translateX(-50%);
+            width: 20px;height: 20px;
+            z-index: 10;
+        }
+        &:nth-child(1) {
+            &:before {
+                background: url(../ico/advantages/shield_white.png) center center / cover no-repeat;
+            }
+        }
+        &:nth-child(2) {
+            &:before {
+                background: url(../ico/advantages/check_white.png) center center / cover no-repeat;
+            }
+        }
+        &:nth-child(3) {
+            &:before {
+                background: url(../ico/advantages/spray_white.png) center center / cover no-repeat;
+            }
+        }
+        &:nth-child(4) {
+            &:before {
+                background: url(../ico/advantages/cert_white.png) center center / cover no-repeat;
+            }
+        }
+        &-title {
+            font-weight: bold;
+        }
+        &-descr{
+            margin-top: 8px;
+            font-weight: 300;
+        }
+    }
+}

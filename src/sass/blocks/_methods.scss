@@ -1,0 +1,32 @@
+.methods {
+    padding: 90px 0 45px 0;
+    &__title {
+        color:var(--dark-clr);
+    }
+    &__list {
+        padding-left: 20px;
+    }
+    &__point {
+        position: relative;
+        margin-bottom: 20px;
+        list-style: disk;
+        &-title {
+            font-size: 21px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+        &:after {
+            @include pseudo;
+            background: var(--danger-clr);
+            width: 20px;height: 20px;
+            border-radius:100%;
+            top: 3px;left: -22px;
+            z-index: -1;
+        }
+    }
+    &__txt {
+        margin-left: 30px;
+        font-weight: 300;
+    }
+}

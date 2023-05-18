@@ -1,0 +1,53 @@
+.faq{
+    padding: 90px 0 45px 0;
+    &__title {
+        color:var(--dark-clr);
+    }
+    .accordion {
+        &-item {
+            margin: 2px 0;
+            &-header{
+                padding: 10px 15px;
+                background:var(--danger-clr);
+                color: var(--white-clr);
+                cursor: pointer;
+                font-weight: bold;
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    right: 15px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    width: 20px;height: 20px;
+                    background: url(../ico/arrow.png) center center / cover no-repeat;
+                    transition: .6s all;
+                }
+            }
+            &-content {
+                background: white;
+                color:var(--black-clr);
+                font-size: 14px;
+                transition: .4s ease;
+                visibility: hidden;
+                height: 0;
+                opacity: 0;
+                font-weight: 300;
+            }
+        }
+    }
+    .accordion-item.show .accordion-item-content {
+        padding: 10px 15px;
+        visibility: visible;
+        height: auto;
+        opacity: 1;
+      }
+      .accordion-item.show .accordion-item-header {
+        background: var(--danger-clr);
+        color: var(--white-clr);
+        &:after{
+            transition: .6s all;
+            transform: rotateX(180deg) translateY(50%);
+        }
+      }
+}

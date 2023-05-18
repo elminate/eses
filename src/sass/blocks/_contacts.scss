@@ -1,0 +1,50 @@
+.contacts {
+    &__razdel {
+        position: relative;
+        font-size: 15px;
+        font-weight: bold;
+        color:var(--dark-clr);
+        width: 240px;
+    }
+    &__tel {
+        color:#000;
+        padding-left: 60px;
+        &:after {
+            @include pseudo;
+            background: url(../ico/tel.svg) center center / cover no-repeat;
+            width: 28px;height: 45px;
+            left: 0;
+        }
+    }
+    &__time {
+        padding-left: 70px;
+        &:after {
+            @include pseudo;
+            background: url(../ico/time.svg) center center / cover no-repeat;
+            width: 39px;height: 36px;
+            left: 0;
+        }
+    }
+    &__address {
+        padding-left: 60px;
+        font-style: normal;
+        &:after {
+            @include pseudo;
+            background: url(../ico/location.svg) center center / cover no-repeat;
+            width: 28px;height: 38px;
+            left: 0;
+        }
+    }
+    &__mail {
+        padding-left: 70px;
+        &:after {
+            @include pseudo;
+            background: url(../ico/mail.svg) center center / cover no-repeat;
+            width: 40px;height: 28px;
+            left: 0;
+        }
+    }
+    &__map {
+        margin-top: 30px;
+    }
+}

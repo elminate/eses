@@ -1,0 +1,14 @@
+.txt {
+    &__seo{
+        padding: 45px 0 50px 0;
+        color:var(--dark-clr);
+        font-weight: 300;
+        .container {
+            background: white;
+            padding: 50px;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+}

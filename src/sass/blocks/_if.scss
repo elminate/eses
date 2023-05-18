@@ -1,0 +1,45 @@
+.if {
+    padding: 90px 0 45px 0;
+    font-weight: 300;
+    &__title {
+        color:var(--dark-clr);
+    }
+    &__list {
+        position: relative;
+        padding: 90px 20px 20px 20px;
+        border: 3px solid var(--danger-clr);
+        border-radius: 20px;
+        width: 230px;
+        &:after {
+            @include pseudo;
+            background: var(--danger-clr);
+            width: 50px;height: 50px;
+            border-radius:100%;
+            top: 20px;
+            left:50%;transform: translateX(-50%);
+            z-index: -1;
+        }
+        &::before {
+            top: 35px;
+            left:50%;transform: translateX(-50%);
+            @include pseudo;
+            width: 20px;height: 20px;
+            z-index: 10;
+        }
+        &:nth-child(1) {
+            &:before {
+                background: url(../ico/insects/bug_white.png) center center / cover no-repeat;
+            }
+        }
+        &:nth-child(2) {
+            &:before {
+                background: url(../ico/insects/home_white.png) center center / cover no-repeat;
+            }
+        }
+        &:nth-child(3) {
+            &:before {
+                background: url(../ico/insects/car_white.png) center center / cover no-repeat;
+            }
+        }
+    }
+}

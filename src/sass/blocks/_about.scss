@@ -1,0 +1,46 @@
+.about{
+    padding: 92px 0;
+    &__title {
+        color:var(--black-clr);
+    }
+    &__wrapper{
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -92px;
+            left: 0;
+            background: url(../img/exterminator.png) center center / cover no-repeat;
+            width: 566px;
+            height: 394px;
+            z-index: -2;
+        }
+    }
+    &__txt{
+        &-p{
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+    }
+    &__ramka {
+        padding: 40px;
+        background: var(--danger-clr);
+        font-weight: bold;
+        line-height: 22px;
+        text-transform: uppercase;
+        color:var(--white-clr);
+        margin-top: 50px;
+        margin-left: 15px;
+        position: relative;
+        &:after{
+            content: '';
+            border: 2px solid var(--black-clr);
+            position: absolute;
+            left: -17px;
+            right: 17px;
+            bottom: 17px;
+            top: -17px;
+            z-index: -1;
+        }
+    }
+}
