@@ -69,6 +69,20 @@
     .advantages {
         padding: 90px 0;
     }
+
+    .where {
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .contacts {
+        &__main {
+            flex-wrap: wrap;
+            gap: 44px;
+        }
+    }
 }
 
 @media (max-width: 1020px) {
@@ -92,7 +106,8 @@
             margin-right: 20px;
             margin-top: 6px;
         }
-        .m{}
+
+        .m {}
 
         &__menu-btn {
             width: 30px;
@@ -171,6 +186,56 @@
     .btn-box {
         flex-direction: column;
         // gap: 20px;
+    }
+
+    .methods {
+        padding: 40px 0;
+
+        .flex {
+            flex-direction: column-reverse;
+            gap: 32px;
+        }
+
+        &__list {
+            padding-left: 0;
+        }
+
+        .col-lg-5 {
+            width: 70%;
+        }
+    }
+
+    .if {
+        padding: 40px 0;
+
+        .flex {
+            gap: 40px;
+        }
+    }
+
+    .where {
+        &__list {
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            align-items: center;
+            grid-gap: 12px;
+        }
+
+        &__point {
+            width: 100%;
+        }
+    }
+
+    .contacts {
+        &__cart {
+            flex-direction: column;
+            gap: 20px;
+            align-items: start;
+        }
+
+        &__map {
+            width: 100%;
+        }
     }
 }
 
@@ -262,6 +327,7 @@
         line-height: 40px;
         border: 1px solid var(--danger-clr);
         padding-left: 0;
+        padding: 2px;
     }
 
     .zagolovok {
@@ -273,7 +339,7 @@
     }
 
     .about {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .advantages {
@@ -297,10 +363,28 @@
         gap: 30px;
     }
 
+
     .btn {
         &__header {
             margin-right: 0;
         }
+    }
+
+    .advantages {
+        ul {
+            display: grid;
+            grid-template-columns: 50% 1fr;
+            grid-gap: 24px;
+        }
+
+        &__list {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .py60 {
+        padding: 40px 0;
     }
 }
 
@@ -327,6 +411,11 @@
 
     .fz-title {
         font-size: 42px;
+        line-height: 56px;
+    }
+
+    .fz-xl {
+        font-size: 16px;
     }
 
     .faq {
@@ -363,6 +452,20 @@
             display: grid;
             grid-template-columns: 100%;
             grid-gap: 24px;
+        }
+    }
+
+    .advantages {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 24px;
+        }
+    }
+
+    .methods {
+        &__img {
+            max-width: 100%;
         }
     }
 }
@@ -457,15 +560,57 @@
     .footer__form-subtitle {
         font-size: 24px;
     }
+
+    .if {
+        .flex {
+            gap: 20px;
+        }
+
+        &__txt {
+            font-size: 12px;
+        }
+    }
+
+    .methods {
+        &__point-title {
+            font-size: 18px;
+            margin-left: 16px;
+        }
+
+        &__txt {
+            font-size: 12px;
+            margin-left: 16px;
+        }
+
+        &__point {
+            &::after {
+                top: 1px;
+            }
+
+        }
+    }
+
+    .where {
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        &__point {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 450px) {
     .faq {
         .accordion-item-header {
-            padding-bottom: 36px;
+            padding-bottom: 48px;
 
             &::after {
-                top: 54px;
+                top: 68px;
                 right: 48%;
             }
         }
