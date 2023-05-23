@@ -107,7 +107,19 @@
             margin-top: 6px;
         }
 
-        .m {}
+        .menu-btn--active span {
+            transform: translateX(-5000%);
+        }
+
+        .menu-btn--active::before {
+            transform: rotatez(45deg) translate(11px, 11px);
+            transition: .3s all;
+        }
+
+        .menu-btn--active::after {
+            transform: translate(0, -11px) rotatez(-45deg);
+            transition: .3s all;
+        }
 
         &__menu-btn {
             width: 30px;
@@ -148,9 +160,28 @@
         }
 
         &__nav-main-list {
+        display: flex;
             flex-direction: column;
-            display: none;
+            z-index: 2;
+            background: #fff;
+            width: 78%;
+            margin: 0 auto;
+            padding: 30px;
+            gap: 30px;
+            line-height: 24px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 150px;
+            text-align: center;
+            border-radius: 8px;
+            transition: all .6s;
+            transform: translateX(-200%);
         }
+        &__nav-main-link{
+         color: #000;
+        }
+
 
         &__bot {
             padding: 18px 0;
@@ -170,74 +201,88 @@
         }
 
     }
+}
 
-    .btn,
-    .promo__form-input {
-        border-radius: 25px;
-        padding: 12px 20px;
-        height: auto;
-        margin-bottom: 20px;
+.btn,
+.promo__form-input {
+    border-radius: 25px;
+    padding: 12px 20px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.col-md-4 {
+    width: auto;
+}
+
+.btn-box {
+    flex-direction: column;
+    // gap: 20px;
+}
+
+.advantages {
+    ul {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        grid-gap: 24px;
     }
 
-    .col-md-4 {
-        width: auto;
-    }
-
-    .btn-box {
-        flex-direction: column;
-        // gap: 20px;
-    }
-
-    .methods {
-        padding: 40px 0;
-
-        .flex {
-            flex-direction: column-reverse;
-            gap: 32px;
-        }
-
-        &__list {
-            padding-left: 0;
-        }
-
-        .col-lg-5 {
-            width: 70%;
-        }
-    }
-
-    .if {
-        padding: 40px 0;
-
-        .flex {
-            gap: 40px;
-        }
-    }
-
-    .where {
-        &__list {
-            display: grid;
-            grid-template-columns: 50% 1fr;
-            align-items: center;
-            grid-gap: 12px;
-        }
-
-        &__point {
-            width: 100%;
-        }
-    }
-
-    .contacts {
-        &__cart {
-            flex-direction: column;
-            gap: 20px;
-            align-items: start;
-        }
-
-        &__map {
-            width: 100%;
-        }
+    &__list {
+        width: 100%;
+        margin: 0;
     }
 }
+
+.methods {
+    padding: 40px 0;
+
+    .flex {
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+
+    &__list {
+        padding-left: 0;
+    }
+
+    .col-lg-5 {
+        width: 70%;
+    }
+}
+
+.if {
+    padding: 40px 0;
+
+    .flex {
+        gap: 40px;
+    }
+}
+
+.where {
+    &__list {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        align-items: center;
+        grid-gap: 12px;
+    }
+
+    &__point {
+        width: 100%;
+    }
+}
+
+.contacts {
+    &__cart {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+
+    &__map {
+        width: 100%;
+    }
+}
+
 
 @media (max-width: 992px) {
     .container {
@@ -370,18 +415,6 @@
         }
     }
 
-    .advantages {
-        ul {
-            display: grid;
-            grid-template-columns: 50% 1fr;
-            grid-gap: 24px;
-        }
-
-        &__list {
-            width: 100%;
-            margin: 0;
-        }
-    }
 
     .py60 {
         padding: 40px 0;
@@ -631,6 +664,20 @@
             font-size: 14px;
         }
     }
+
+    .modal {
+        padding: 30px;
+
+        &__title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        &__input {
+            margin-bottom: 12px;
+        }
+    }
 }
 
 @media (max-width: 450px) {
@@ -657,10 +704,7 @@
 
     .price {
         &__table {
-            max-width: 70%;
-
             td {
-                font-size: 8px;
                 padding: 4px;
             }
         }
